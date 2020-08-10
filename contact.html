@@ -18,29 +18,41 @@
 
   <body>
     <header>
-      <div class="nav-area">
-        <img src="images\logo.png" alt="logo" class="logo" />
-
-        <ul class="menu-bar">
-          <li><a href="Home.html" target="_self">Home</a></li>
-          <li><a href="cv.html" target="_self">CV</a></li>
-          <li><a href="hobby.html" target="_self">Hobby</a></li>
-          <li><a href="contact.html" target="_self">Contact</a></li>
-        </ul>
+      <div class="container">
+        <div>
+          <img src="images\logo.png" alt="logo" class="logo" />
+        </div>
+        <div id="initials-highlight">
+          <h1>
+            <span class="highlight">S</span>iriteanu
+            <span class="highlight">B</span>ogdan
+          </h1>
+        </div>
+        <nav>
+          <ul class="menu-bar">
+            <li class="current">
+              <a href="Home.html" target="_self" class="anim-li">Home</a>
+            </li>
+            <li class="anim-li1">
+              <a href="Experience.html" target="_self">Experience</a>
+            </li>
+            <li class="anim-li2">
+              <a href="Hobby.html" target="_self">Hobby</a>
+            </li>
+            <li class="anim-li3">
+              <a href="Contact.html" target="_self">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <main class="contact-content">
-      <div class="contact-title"><h1>Have some questions?</h1></div>
-      <div class="contact-para"><p>Contact me.</p></div>
+    <main class="container">
+      <div class="contact-title">
+        <h1>Have some questions?</h1>
+        <p>Contact me.</p>
+      </div>
+
       <section class="section-grid">
-        <div class="image-grid">
-          <img
-            src="images\pngegg.png"
-            alt="image"
-            width="300px"
-            height="300px"
-          />
-        </div>
         <form
           class="contact-grid"
           action="mailto:bogdan_siriteanu@yahoo.com"
@@ -79,18 +91,22 @@ Your questions...</textarea
       </section>
     </main>
     <footer>
-      <h2>Contact:</h2>
-      <div class="footer-list">
-        <ul>
-          <li><i class="fas fa-phone-alt"></i>Phone: 0742345513</li>
-          <li>
-            <i class="far fa-envelope-open"></i>E-mail:
-            bogdan_siriteanu@yahoo.com
-          </li>
-          <li>
-            <i class="fas fa-home"></i>Adress: Str. Mihai Romanu, Cluj-Napoca.
-          </li>
-        </ul>
+      <div class="container">
+        <div id="footer-h2">
+          <p>Contact:</p>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li><i class="fas fa-phone-alt"></i>Phone: 0742345513</li>
+            <li>
+              <i class="far fa-envelope-open"></i>E-mail:
+              bogdan_siriteanu@yahoo.com
+            </li>
+            <li>
+              <i class="fas fa-home"></i>Adress: Str. Mihai Romanu, Cluj-Napoca.
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

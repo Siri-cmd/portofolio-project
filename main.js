@@ -3,7 +3,7 @@ var $dotsdiv = document.getElementsByClassName("dots")[0];
 
 var $btn1 = document.getElementById("btn1");
 var $btn2 = document.getElementById("btn2");
-//TO DO: var $btn3 = ..
+var $btn3 = document.getElementById("btn3");
 
 var slideIndex = -1;
 var showSlidesTimeout;
@@ -89,7 +89,36 @@ slideDataMap.set("gardening", [
       '<a href="https://en.wikipedia.org/wiki/Magnolia">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
 ]);
-slideDataMap.set("gaming", []); //TO DO
+slideDataMap.set("gaming", [
+  new Slide(
+    "images/counter-strike.png",
+    "Counter-Strike",
+    "Long nights wasted.",
+    LOREM_TEXT +
+      '<a href="https://counterstrike.fandom.com/wiki/Counter-Strike">Read more...<i class="fas fa-angle-double-right"></i></a>'
+  ),
+  new Slide(
+    "images/LeagueofLegends.png",
+    "League_Of_Legends",
+    "5 more minutes Mom!",
+    LOREM_TEXT +
+      '<a href="https://www.nfhs.org/media/1020428/what-is-league-of-legends_.pdf">Read more...<i class="fas fa-angle-double-right"></i></a>'
+  ),
+  new Slide(
+    "images/playstation.png",
+    "Playstation",
+    "The power of Playstation.",
+    LOREM_TEXT +
+      '<a href="https://en.wikipedia.org/wiki/PlayStation">Read more...<i class="fas fa-angle-double-right"></i></a>'
+  ),
+  new Slide(
+    "images/catan-mania.png",
+    "Catan",
+    "Where there's beer, there's a way.",
+    LOREM_TEXT +
+      '<a href="https://www.catan.com/game/catan-universe#">Read more...<i class="fas fa-angle-double-right"></i></a>'
+  ),
+]);
 
 let htmlSlidesMap = new Map();
 htmlSlidesMap.set("exploring-the-world", []);
@@ -264,6 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   populateHtmlSlidesMap("exploring-the-world");
   populateHtmlSlidesMap("gardening");
+  populateHtmlSlidesMap("gaming");
 
   //default slides
   setSlides("exploring-the-world");
@@ -275,5 +305,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $btn2.addEventListener("click", () => changeSlideShowContent("gardening"));
 
-  //TO DO: btn3
+  $btn3.addEventListener("click", () => changeSlideShowContent("gaming"));
 });
