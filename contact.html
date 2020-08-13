@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact-Personal Project</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -93,10 +93,11 @@
             />
             <label for="email">Email</label>
             <input
-              type="text"
+              type="email"
               class="contact-input2"
               id="email"
               name="email"
+              required
               placeholder="Enter email"
             />
             <label for="subject">Subject</label>
@@ -110,13 +111,19 @@
             <label for="message">Message</label>
             <textarea
               class="contact-textarea"
+              id="message"
               name="message"
               rows="10"
               cols="30"
             >
 Your questions...</textarea
             >
-            <input class="input-btn" type="Submit" value="Send Message" />
+            <input
+              class="input-btn"
+              type="button"
+              value="Send E-mail"
+              onclick="sendEmail()"
+            />
           </form>
         </div>
       </section>
@@ -137,6 +144,6 @@ Your questions...</textarea
       </div>
     </footer>
 
-    <script src="Main.js" async></script>
+    <script src="Contact.js" async></script>
   </body>
 </html>

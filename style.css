@@ -409,13 +409,13 @@ main h1 {
   vertical-align: middle;
   width: 100%;
   min-width: 300px;
-  height: auto;
+  height: 450px;
 }
 
-.content {
+/* .content {
   max-width: 1000px;
   margin: 3% auto;
-}
+} */
 
 .content-text {
   color: white;
@@ -488,6 +488,9 @@ main h1 {
   main h1 {
     font-size: 1.4em;
     margin-left: 20px;
+  }
+  .content-pics img {
+    height: auto;
   }
   .btns {
     margin: 0 0 200px 0;
@@ -698,6 +701,9 @@ footer {
   .weather-side {
     margin-top: 100px;
   }
+  .weather-side button {
+    margin-top: 2px;
+  }
   .contact-side {
     margin-top: 60px;
   }
@@ -874,6 +880,11 @@ footer {
 
 .skill h3 {
   padding-top: 20px;
+  font-size: 1.8em;
+}
+
+.skill p {
+  font-size: 1.4em;
 }
 
 /* experience bar */

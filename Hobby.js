@@ -7,8 +7,6 @@ var $btn3 = document.getElementById("btn3");
 
 var slideIndex = -1;
 var showSlidesTimeout;
-var LOREM_TEXT =
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem aut, incidunt ipsum, ipsa quis, excepturi id assumenda deserunt laboriosam voluptate soluta? ";
 
 class Slide {
   constructor(imgfilename, imgaltname, imgtitle, imgHTMLdescription) {
@@ -34,28 +32,28 @@ slideDataMap.set("exploring-the-world", [
     "images/Rhodes.png",
     "Rhodes",
     "The beautiful Old Town of Rhodes.",
-    LOREM_TEXT +
+    "What a fantastic city! An amazing blend between the old and new world, friendly people, lots of activities and places to see. The well preserved Old Town full of historical places. It's one of those places that you always want to go back." +
       '<a href="https://en.wikipedia.org/wiki/Rhodes">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/Machu-Picchu.png",
     "Machu_Picchu",
     "The lost Aztec City of Machu Pichu.",
-    LOREM_TEXT +
+    "A place on my bucket list is Machu Pichu. Really far away in Peru, south America, on top of the mountains, there was the Aztec people who were really advanced for their time. " +
       '<a href="https://ro.wikipedia.org/wiki/Machu_Picchu">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/Teide-tenerife.png",
     "Teide-tenerife",
     "Amazing view of Teide Volcano in Tenerife.",
-    LOREM_TEXT +
+    "You wanna go on a volcano in flip-flops and summer clothes? Teide Volcano in Tenerife gives you that chance.You need to go by car up to 2000m and from there a Cable Car will take almost to the top. you should see the view." +
       '<a href="https://en.wikipedia.org/wiki/Teide">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/WalkofFame.png",
     "WalkofFame",
     "A famous walk.",
-    LOREM_TEXT +
+    "I never thought that ill get to see Walk of Fame. So many stars, famous actors, singers, some i didn't knew about, some shouldn't be there i belive. Yet its a crowded place with lots of joy and happy people. If you miss it is not really a big loss." +
       '<a href="https://en.wikipedia.org/wiki/Hollywood_Walk_of_Fame">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
 ]);
@@ -64,28 +62,28 @@ slideDataMap.set("gardening", [
     "images/Flori-Liliac.png",
     "Liliac",
     "Equilibrium.",
-    LOREM_TEXT +
+    "So I enjoy gardening and flowers, and the Lilac is one you need to have in your garden. It has a great balance between flowers and perfume, too bad it doesn't last long." +
       '<a href="https://www.gardenia.net/plant-variety/syringa-vulgaris-common-lilac">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/caprifoi-gradina.png",
     "Caprifoi",
     "A breath taking parfume.",
-    LOREM_TEXT +
+    "Now this is a great plant. Has a bunch of small flowers and a very strong perfume. You can feel it from a distance. It can survive on its own, and it climbs and stretches all over. It a must have." +
       '<a href="https://ro.wikipedia.org/wiki/Caprifoi">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/RedRose.png",
     "RedRose",
     "Spikes and Roses.",
-    LOREM_TEXT +
+    "Roses, adored by everyone, with light and tender perfume, and various colors, you can will any girls heart. Some have more spikes so bee carefull. These days, the possibility of colours are infinite." +
       '<a href="https://en.wikipedia.org/wiki/Rose">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/MagnoliaTree.png",
     "Magnolia",
     "Magnolia before bees.",
-    LOREM_TEXT +
+    "An ancient on this Earth. A research studi shows that this species of trees are older then bees. Can you imagine that? That old and still showing off with those amazing flowers." +
       '<a href="https://en.wikipedia.org/wiki/Magnolia">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
 ]);
@@ -94,28 +92,28 @@ slideDataMap.set("gaming", [
     "images/counter-strike.png",
     "Counter-Strike",
     "Long nights wasted.",
-    LOREM_TEXT +
+    "Best team player shooter game of its time, where youngsters used to stay all night in the internet cafe (so was I!). Once you started playing you couldn't stop, was like a demon was taking control. Good times :)" +
       '<a href="https://counterstrike.fandom.com/wiki/Counter-Strike">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/LeagueofLegends.png",
     "League_Of_Legends",
     "5 more minutes Mom!",
-    LOREM_TEXT +
+    "Here we have another example of a more modern game that used to keep you awake at night. Not even your mother could separate you from the Pc. Not even food could bring you out of that room. Some are still in their rooms even today." +
       '<a href="https://www.nfhs.org/media/1020428/what-is-league-of-legends_.pdf">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/playstation.png",
     "Playstation",
     "The power of Playstation.",
-    LOREM_TEXT +
+    "I can easily say that Console stastions are the most fun when comes to multiplayer. First before Pc's and still kickin. Its a really nice way to spend with friend, or alone (if you have no friend)." +
       '<a href="https://en.wikipedia.org/wiki/PlayStation">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
   new Slide(
     "images/catan-mania.png",
     "Catan",
     "Where there's beer, there's a way.",
-    LOREM_TEXT +
+    "People show more and more interest in Society games, so they can connect to each other and have fun. Catan its a great strategy game and has many extensions, and its fun, and goes well with some beers." +
       '<a href="https://www.catan.com/game/catan-universe#">Read more...<i class="fas fa-angle-double-right"></i></a>'
   ),
 ]);
@@ -268,7 +266,7 @@ function showSlides(slideSetName) {
   }
   dots[slideIndex].classList.add("active");
 
-  showSlidesTimeout = setTimeout(showSlides, 5000);
+  showSlidesTimeout = setTimeout(showSlides, 3000);
 }
 
 /**
@@ -301,112 +299,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $btn3.addEventListener("click", () => changeSlideShowContent("gaming"));
 });
-
-//weather app
-
-const url = "http://api.openweathermap.org/data/2.5/weather?";
-const apiKey = "appid=207414ebaee9e5ea84e2cf27cf0d1235";
-const unitsButton = document.querySelector("button");
-const iconElement = document.querySelector(".weather-icon");
-const tempElement = document.querySelector(".temperature-value p");
-const descElement = document.querySelector(".temperature-description p");
-const locationElement = document.querySelector(".location p");
-const notificationElement = document.querySelector(".notification");
-const weather = {};
-let units = localStorage.getItem("units");
-localStorage.setItem("units", "metric");
-
-let unitsCookie = getCookie("units");
-
-function setCookie(name, value, days) {
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-function getCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(";");
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == " ") c = c.substring(1, c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-  }
-  return null;
-}
-
-function eraseCookie(name) {
-  document.cookie = name + "=; Max-Age=-99999999;";
-}
-
-navigator.geolocation.getCurrentPosition(getWether, showError);
-
-function showError(error) {
-  notificationElement.style.display = "block";
-  notificationElement.innerHTML = `<p>${error.message}</p>`;
-}
-
-function getWether(position) {
-  const lat = position.coords.latitude;
-  const long = position.coords.longitude;
-  let api = "";
-
-  const celsius = "units=metric";
-  const fahrenheit = "units=imperial";
-
-  if (unitsCookie !== "imperial") {
-    api = `${url}&lat=${lat}&lon=${long}&${celsius}&${apiKey}`;
-  } else {
-    api = `${url}&lat=${lat}&lon=${long}&${fahrenheit}&${apiKey}`;
-  }
-
-  fetch(api)
-    .then((respose) => respose.json())
-    .then((data) => {
-      weather.temperature = data.main.temp;
-      weather.description = data.weather[0].description;
-      weather.location = data.name;
-      weather.iconId = data.weather[0].icon;
-    })
-    .then(() => displayWeather());
-}
-function displayWeather() {
-  iconElement.innerHTML = `<img src="img/${weather.iconId}.png">`;
-  if (unitsCookie === "metric") {
-    tempElement.innerHTML = `${weather.temperature}°<span>C</span>`;
-  } else {
-    tempElement.innerHTML = `${weather.temperature}°<span>F</span>`;
-  }
-  descElement.innerHTML = `${weather.description}`;
-  locationElement.innerHTML = `${weather.location}`;
-}
-
-unitsButton.addEventListener("click", () => {
-  units = localStorage.getItem("units");
-  unitsCookie = getCookie("units");
-  console.log(unitsCookie);
-
-  if (unitsCookie === "metric") {
-    setCookie("units", "imperial", 100);
-    unitsCookie = getCookie("units");
-    console.log(unitsCookie);
-    navigator.geolocation.getCurrentPosition(getWether, showError);
-  } else {
-    setCookie("units", "metric", 100);
-    unitsCookie = getCookie("units");
-    console.log(unitsCookie);
-    navigator.geolocation.getCurrentPosition(getWether, showError);
-  }
-});
-
-Email.send({
-  SecureToken: "de64449b-3a9b-4d37-bbc8-be4101744912",
-  To: "siriteanubogdan85@gmail.com",
-  From: "you@isp.com",
-  Subject: "This is the subject",
-  Body: "And this is the body",
-}).then((message) => alert(message));
