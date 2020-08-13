@@ -7,9 +7,10 @@ body {
   font-family: kaushan;
   font-size: 15px;
   line-height: 1.5;
-  background-image: url("images\\forest-931706_1920.jpg");
+  background-image: url("images\\wall.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: bottom;
   min-height: 100vh;
   padding: 0;
   margin: 0;
@@ -94,9 +95,6 @@ header img {
   float: left;
   margin: 0;
   position: absolute;
-}
-
-header.logo {
   max-width: 100%;
   height: auto;
 }
@@ -122,6 +120,29 @@ li.current a {
 
 header a:hover {
   color: #cccccc;
+}
+
+@media only screen and (max-width: 768px) {
+  header img {
+    max-width: 100px;
+    height: auto;
+  }
+  header nav {
+    margin-top: 0;
+    margin-left: 40px;
+  }
+  header h1 {
+    margin-left: 140px;
+    padding-left: 30px;
+    font-size: 1.8em;
+  }
+  header a {
+    font-size: 1.2em;
+  }
+  header li {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 /* aside-home*/
@@ -168,18 +189,47 @@ header a:hover {
   background: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .social-media {
+    top: 60%;
+  }
+  .social-media ul {
+    width: 50px;
+  }
+  .social-media li {
+    padding: 6px;
+  }
+  .social-media li:hover {
+    padding: 6px 12px;
+  }
+  .social-media li:nth-child(1),
+  .social-media li:nth-child(2),
+  .social-media li:nth-child(3) {
+    font-size: 16px;
+  }
+}
+
 /* section-home */
 
+#boxes {
+  display: grid;
+  height: 50vh;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 #boxes .box {
-  width: 40%;
-  float: left;
+  display: grid;
+  place-items: center;
 }
 
-#boxes .box img {
-  margin-top: 150px;
-  margin-left: 170px;
+#boxes .box h1,
+#boxes .box p {
+  display: flex;
+  flex-direction: column;
 }
-
 .self-image {
   max-width: 100%;
   height: auto;
@@ -188,52 +238,59 @@ header a:hover {
 }
 
 #boxes .box h1 {
-  margin-top: 200px;
-  margin-left: 150px;
-  font-size: 2em;
+  font-size: 2.2em;
+  align-self: flex-end;
+  color: white;
 }
 
 #boxes .box p {
-  margin-top: 20px;
-  margin-left: 150px;
-  font-size: 1.2em;
+  font-size: 1.6em;
+  align-self: flex-start;
+  color: white;
 }
 
 .dropdown {
-  float: right;
+  position: absolute;
+  left: 51%;
+  top: 65%;
   cursor: pointer;
-  margin-right: 450px;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  color: white;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 70%;
   background-color: rbga(101, 67, 33, 0.5);
   max-width: 80%;
   padding: 10px 14px;
   z-index: 1;
-  padding-left: 160px;
-  margin-bottom: 40px;
+  color: white;
 }
 
 .dropdown:hover + .dropdown-content {
   display: block;
 }
 
+.dropdown-content p {
+  font-size: 1.4em;
+}
+
 .under-box {
+  display: grid;
+  place-items: center;
   padding-bottom: 200px;
   border-bottom: 3px solid #e8491d;
 }
 
 .graphic-container {
-  /* margin-top: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 100px;
-  display: grid;
-  height: 60vh;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   border-bottom: 3px solid #e8491d;
+  background-color: #35424a;
 }
 
 .graphic-container h3 {
@@ -243,30 +300,62 @@ header a:hover {
 }
 
 .graphic-list {
-  padding: 50px;
+  margin-left: 20px;
   font-size: 1.2em;
-  line-height: 1.6em;
+  line-height: 2em;
   color: white;
 }
 
-.graphic.col1,
-.graphic.col2,
-.graphic.col3 {
-  display: grid;
-  place-items: center;
+.graphic.col {
+  display: flex;
+  flex-direction: column;
 }
-.grafic.col2 img {
+
+.grafic.col img {
   max-width: 100%;
   height: auto;
 }
-.graphic.col3 #ytplayer {
+.graphic.col #ytplayer {
   max-width: 100%;
   height: auto;
 }
 
-.graphic-container {
-  background-color: #35424a;
+@media only screen and (max-width: 768px) {
+  .self-image {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+  .under-box {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  #boxes {
+    margin-top: 0;
+    height: 70vh;
+  }
+  .dropdown {
+    top: 100%;
+    left: 30%;
+  }
+  .dropdown-content {
+    top: 102%;
+  }
+  .dropdown-content p {
+    font-size: 1em;
+  }
+  .graphic-container {
+    margin-bottom: 180px;
+  }
+  #boxes .box h1 {
+    font-size: 1.8em;
+  }
+  #boxes .box p {
+    font-size: 1.4em;
+  }
 }
+
 /* hobby slider*/
 
 * {
@@ -276,6 +365,7 @@ header a:hover {
 main h1 {
   margin: 30px 0 60px 200px;
   color: #ffffff;
+  font-size: 2.2em;
 }
 
 .btns {
@@ -285,6 +375,7 @@ main h1 {
 
 .btns-box {
   display: flex;
+  justify-content: space-between;
   border-bottom: 3px solid #e8491d;
 }
 
@@ -293,13 +384,16 @@ main h1 {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-right: 40px;
   padding: 10px 12px;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: bold;
+  font-family: kaushan;
+  color: white;
 }
 
-.btns-box button:hover .fa {
+#btn1:hover .fa,
+#btn2:hover .fa,
+#btn3:hover .fa {
   color: #e8491d;
 }
 
@@ -314,7 +408,8 @@ main h1 {
 .content-pics img {
   vertical-align: middle;
   width: 100%;
-  height: 400px;
+  min-width: 300px;
+  height: auto;
 }
 
 .content {
@@ -390,21 +485,35 @@ main h1 {
 }
 
 @media only screen and (max-width: 768px) {
-  .text-right {
-    font-size: 0.5em;
-  }
   main h1 {
+    font-size: 1.4em;
+    margin-left: 20px;
+  }
+  .btns {
+    margin: 0 0 200px 0;
+  }
+  .btns-box button {
     font-size: 1.2em;
-    margin-left: 0;
-    margin-bottom: 30px;
+  }
+  .content-text h3 {
+    font-size: 1.4em;
+  }
+  .content-text p {
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+  footer {
+    font-size: 1em;
+  }
+  footer #footer-contact {
+    padding: 0;
   }
 }
 
 /*footer*/
 
 footer {
-  max-width: 100%;
-  height: 60px;
+  height: auto;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -415,126 +524,155 @@ footer {
   border-top: 5px solid #e8491d;
 }
 
-#footer-h2 {
-  float: left;
-  font-size: 1.4em;
-  margin-top: 12px;
-  margin-left: 10px;
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-#footer-h2 p {
-  display: inline;
+#footer-contact {
+  padding: 15px 0;
 }
 
-footer li {
-  display: inline;
-  padding: 0 20px 0 20px;
+/* contact page*/
+
+/* weather app */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 200px;
 }
 
-.footer-list {
-  float: right;
+.weather-side {
+  max-width: 300px;
+  height: auto;
+  background-color: #ffffff;
+  display: block;
+  margin-top: 200px;
+  border-radius: 10px;
+}
+
+.app-title {
+  width: 300px;
+  height: 60px;
+  border-radius: 10px 10px 0 0;
+}
+
+.app-title p {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  color: #293251;
+}
+
+.notification {
+  background-color: #f8d7da;
+  display: none;
+}
+
+.notification p {
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.weather-container {
+  width: 300px;
+  height: auto;
+  background-color: #92d6e1;
+}
+.weather-icon img {
+  display: block;
+  margin: 0 auto;
+}
+.temperature-value {
+  width: 300px;
+  height: 50px;
+}
+
+.temperature-value p {
+  padding: 0;
+  margin: 0;
+  color: #d25a1d;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.temperature-value span {
+  color: #da4628;
+  font-size: 0.5em;
+}
+
+.temperature-description p {
+  padding: 4px;
   margin-top: 15px;
+  color: #293251;
+  text-align: center;
+  font-size: 1.2em;
 }
 
-/*responsive*/
-
-@media only screen and(max-width: 768px) {
-  header #initials-highlight,
-  header nav,
-  header nav li,
-  section.box,
-  .dropdown,
-  #footer-h2,
-  .footer-list {
-    float: none;
-    width: 100%;
-  }
-  header .logo {
-    display: none;
-  }
-  header h1 {
-    margin-left: 20px;
-  }
-
-  .container {
-    width: 100%;
-  }
-  .menu-bar li {
-    display: inline;
-  }
-  #boxes .box img {
-    margin-top: 30px;
-    margin-left: 160px;
-  }
-  #boxes .box h1 {
-    margin-top: 250px;
-    margin-left: -40px;
-    font-size: 1.6em;
-    width: 200px;
-  }
-  #boxes .box p {
-    margin-top: 50px;
-    margin-left: -40px;
-    font-size: 1.4em;
-    width: 300px;
-  }
-  .social-media ul {
-    width: 65px;
-  }
-  .dropdown {
-    margin-right: 0;
-    margin-left: 160px;
-  }
-  .dropdown-content {
-    display: block;
-    margin-bottom: 100px;
-  }
-  footer {
-    font-size: 1em;
-    height: 85px;
-  }
-  #footer-h2 {
-    margin-top: 6px;
-    margin-left: 20px;
-    font-size: 1.2em;
-  }
-  .footer-list {
-    margin: 0;
-    padding: 0;
-    display: inline;
-  }
+.location {
+  width: 300px;
+  height: 60px;
 }
 
-/* contact */
-
-.contact-title {
-  margin-left: 26em;
-  margin-top: 1em;
-  font-size: 1.5em;
-}
-
-.contact-para {
-  margin-left: 29em;
+.location p {
+  margin: 4px;
+  color: #293251;
+  text-align: center;
   font-size: 2em;
 }
 
-.section-grid {
-  display: grid;
-  grid-template-columns: auto auto;
+.weather-side button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-left: 105px;
+  width: 30%;
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  border-radius: 15%;
+  color: #da4628;
+}
+
+/* contact side */
+
+.contact-side {
+  margin-top: 200px;
+  width: 450px;
+  height: auto;
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 70%;
-  grid-row-gap: 10px;
-  margin-left: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-grid label {
+  font-size: 1.4em;
+  color: white;
+}
+
+.contact-title {
+  font-size: 2.2em;
+  color: white;
 }
 
 .input-btn {
   width: 40%;
-  padding: 1em;
-  margin-top: 2em;
-  margin-left: 16.8em;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 16px;
   border-radius: 40px;
   border: none;
   background: -webkit-linear-gradient(
@@ -550,10 +688,22 @@ footer li {
 .contact-input2,
 .contact-input3,
 .contact-textarea {
-  padding: 10px 10px 10px 20px;
+  padding: 10px 10px 10px 10px;
   border-radius: 40px;
   border: 1px solid rgb(227, 227, 227);
   outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .weather-side {
+    margin-top: 100px;
+  }
+  .contact-side {
+    margin-top: 60px;
+  }
+  .contact-title {
+    font-size: 1.8em;
+  }
 }
 
 /* portofolio */
@@ -646,9 +796,9 @@ footer li {
   background-color: white;
 }
 
-/* .study-text2 {
+.study-text2 {
   color: white;
-} */
+}
 
 /* skills tag */
 
@@ -719,6 +869,7 @@ footer li {
 .skill h3 {
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 .skill h3 {
@@ -750,7 +901,8 @@ footer li {
 
 .exp1 img,
 .exp2 img {
-  max-width: 100%;
+  width: 100%;
+  min-width: 150px;
   height: auto;
 }
 
@@ -776,4 +928,17 @@ footer li {
 
 .bottom-gap {
   margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-skills img {
+    width: 100%;
+    height: auto;
+  }
+  .education-bar {
+    margin: 80px 10px 0 0;
+  }
+  .bottom-gap {
+    margin-bottom: 180px;
+  }
 }

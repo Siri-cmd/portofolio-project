@@ -13,7 +13,10 @@
     <script
       src="https://kit.fontawesome.com/cf81f694ea.js"
       crossorigin="anonymous"
+      SameSite="none Secure"
     ></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
 
   <body>
@@ -34,7 +37,7 @@
               <a href="Home.html" target="_self" class="anim-li">Home</a>
             </li>
             <li class="anim-li1">
-              <a href="Experience.html" target="_self">Experience</a>
+              <a href="Resume.html" target="_self">Resume</a>
             </li>
             <li class="anim-li2">
               <a href="Hobby.html" target="_self">Hobby</a>
@@ -47,67 +50,93 @@
       </div>
     </header>
     <main class="container">
-      <div class="contact-title">
-        <h1>Have some questions?</h1>
-        <p>Contact me.</p>
-      </div>
+      <section class="contact-container">
+        <div class="weather-side">
+          <div class="app-title">
+            <p>Weather</p>
+          </div>
+          <div class="notification"></div>
+          <div class="weather-container">
+            <div class="weather-icon">
+              <img src="img/unknown.png" alt="" />
+            </div>
+            <div class="temperature-value">
+              <p>-</p>
+            </div>
+            <div class="temperature-description">
+              <p>-</p>
+            </div>
+            <div class="location">
+              <p>-</p>
+            </div>
+          </div>
+          <button>°C/°F</button>
+        </div>
 
-      <section class="section-grid">
-        <form
-          class="contact-grid"
-          action="mailto:bogdan_siriteanu@yahoo.com"
-          method="post"
-        >
-          <label for="name">Name</label>
-          <input
-            type="text"
-            class="contact-input1"
-            id="name"
-            name="name"
-            placeholder="Enter name"
-          />
-          <label for="email">Email</label>
-          <input
-            type="text"
-            class="contact-input2"
-            id="email"
-            name="email"
-            placeholder="Enter email"
-          />
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            class="contact-input3"
-            id="subject"
-            name="subject"
-            placeholder="Enter subject"
-          />
-          <label for="message">Message</label>
-          <textarea class="contact-textarea" name="message" rows="10" cols="30">
-Your questions...</textarea
+        <div class="contact-title">
+          <p>Questions? Contact me.</p>
+        </div>
+
+        <div class="contact-side">
+          <form
+            class="contact-grid"
+            action="mailto:bogdan_siriteanu@yahoo.com"
+            method="post"
           >
-          <input class="input-btn" type="Submit" value="Send Message" />
-        </form>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="contact-input1"
+              id="name"
+              name="name"
+              placeholder="Enter name"
+            />
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="contact-input2"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+            />
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              class="contact-input3"
+              id="subject"
+              name="subject"
+              placeholder="Enter subject"
+            />
+            <label for="message">Message</label>
+            <textarea
+              class="contact-textarea"
+              name="message"
+              rows="10"
+              cols="30"
+            >
+Your questions...</textarea
+            >
+            <input class="input-btn" type="Submit" value="Send Message" />
+          </form>
+        </div>
       </section>
     </main>
+
     <footer>
-      <div class="container">
-        <div id="footer-h2">
-          <p>Contact:</p>
+      <div class="footer-container">
+        <div id="footer-contact">Copyright&copy;; 2020 S.B.</div>
+        <div id="footer-contact">
+          <i class="fas fa-phone-alt"></i>Phone: 0742345513
         </div>
-        <div>
-          <ul class="footer-list">
-            <li><i class="fas fa-phone-alt"></i>Phone: 0742345513</li>
-            <li>
-              <i class="far fa-envelope-open"></i>E-mail:
-              bogdan_siriteanu@yahoo.com
-            </li>
-            <li>
-              <i class="fas fa-home"></i>Adress: Str. Mihai Romanu, Cluj-Napoca.
-            </li>
-          </ul>
+        <div id="footer-contact">
+          <i class="far fa-envelope-open"></i>E-mail:bogdan_siriteanu@yahoo.com
+        </div>
+        <div id="footer-contact">
+          <i class="fas fa-home"></i>Adress: Str. Mihai Romanu, Cluj-Napoca.
         </div>
       </div>
     </footer>
+
+    <script src="Main.js" async></script>
   </body>
 </html>
