@@ -441,13 +441,13 @@ main h1 {
 
 .dots {
   text-align: center;
+  border-bottom: 3px solid #e8491d;
 }
 
 .dot {
   height: 15px;
   width: 15px;
-  margin: 0 2px;
-  margin-top: 10px;
+  margin: 15px 0;
   background-color: #ffffff;
   border-radius: 50%;
   border: 1px solid #f5a146;
@@ -646,6 +646,11 @@ footer {
   border: none;
   border-radius: 15%;
   color: #da4628;
+  background: -webkit-linear-gradient(
+    left,
+    rgb(148, 115, 221) 0%,
+    rgb(26, 201, 228) 100%
+  );
 }
 
 /* contact side */
@@ -952,4 +957,62 @@ footer {
   .bottom-gap {
     margin-bottom: 180px;
   }
+  .skill h3 {
+    font-size: 1.2em;
+  }
+  .skill p {
+    font-size: 1em;
+  }
+}
+
+/* .projects */
+
+.projects-container {
+  margin-bottom: 200px;
+}
+
+.projects-container h3 {
+  color: white;
+  font-size: 2.2em;
+  margin-left: 60px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+.projects img {
+  width: 400px;
+  height: auto;
+}
+
+.projects h2 {
+  color: white;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-item button {
+  margin-top: 20px;
+  padding: 8px;
+  border-radius: 15px;
+  border: none;
+  background: -webkit-linear-gradient(
+    left,
+    rgb(148, 115, 221) 0%,
+    rgb(26, 201, 228) 100%
+  );
+}
+
+.project-item button a {
+  text-decoration: none;
 }

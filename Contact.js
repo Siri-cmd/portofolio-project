@@ -125,8 +125,8 @@ function sendEmail() {
         "Title: " +
         $subject_input.value,
       Body: $subject_message.value,
-    }).then((message) => alert("mail sent successfully" + message));
+    }).then(() => swal("Yuhuu!", "mail sent successfully", "success"));
   } else {
-    alert("Please insert a valid e-mail");
+    swal("Oops!", "Please insert a valid e-mail", "error");
   }
 }
